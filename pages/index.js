@@ -10,7 +10,7 @@ export async function getStaticProps(){
   return{
     props:{recipes: res.items}
   }
-}
+};
 
 export default function Recipes({ recipes }) {
   console.log(recipes)
