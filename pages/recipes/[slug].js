@@ -22,8 +22,8 @@ export const getStaticPaths = async () =>{
 export async function getStaticProps({params}){
   const res = await client.getEntries({content_type: 'recipe','fields.slug':params.slug})
   return{
-    props: {recipe: res.items[0]}
-    
+    props: {recipe: res.items[0]},
+    revalidate: 1
   }
 }
 
